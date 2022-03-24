@@ -1,3 +1,12 @@
 /scripts/*
 commitmsg.py
-*.sh
+createmultifiles.sh
+editfiles.sh
+getimages.sh
+push.sh
+commits.sh
+bigassfile.sh
+linecountinfile.sh
+pr.sh
+add+commit.sh
+pr-conflict.sh
