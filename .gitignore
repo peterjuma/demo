@@ -10,3 +10,4 @@ linecountinfile.sh
 pr.sh
 add+commit.sh
 pr-conflict.sh
+issue.sh
