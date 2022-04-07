@@ -12,3 +12,4 @@ add+commit.sh
 pr-conflict.sh
 issue.sh
 *stage.sh
+checkout.sh
