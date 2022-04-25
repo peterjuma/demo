@@ -1,0 +1,10 @@
+<head>
+   	<title>Test Site Change 1</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+</head>
+<body>
+ <div>
+      <p>Testing for line ending. Change 1</p>
+ </div>
+</body>
