@@ -3,11 +3,9 @@ description: File a bug report
 title: "[Bug]: "
 labels: ["bug", "triage"]
 assignees:
-  - octocat
+  - peterjuma
 body:
-  - type: markdown
-    value: "## Welcome!"
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        - [] Thanks for taking the time to fill out this bug report!
