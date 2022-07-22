@@ -6,7 +6,8 @@ assignees:
   - octocat
 body:
   - type: markdown
-    value: "## Welcome!"
+    attributes:
+      value: "## Welcome!"
   - type: markdown
     attributes:
       value: |
