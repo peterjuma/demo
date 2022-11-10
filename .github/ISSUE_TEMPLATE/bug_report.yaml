@@ -1,6 +1,6 @@
 name: 🐞 Bug report
 description: Create a bug report to help us improve NativeScript
-labels: [bug-pending-triage]
+labels: ["bug pending triage"]
 
 body:
   - type: markdown
