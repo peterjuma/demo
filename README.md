@@ -83,4 +83,5 @@ Pellentesque commodo eros a enim. Nam eget dui.
   <img src=cat.jpg width=200/>
   <img src=mouse.jpg width=200/>
   <img src=cat.jpg width=200/>
+  <img src=cat.jpg width=200/>
 Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl.
