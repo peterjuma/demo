@@ -4,7 +4,7 @@
 # count=${1:-$default}
 COUNT="$1"
 
-FILE=$(cat /usr/share/dict/web2a | sort -R | head -1 | sed 's/ //g')
+FILE=$(lipsum -n 1 -w 1 | awk '{print tolower($0) ext}' | awk '{gsub(/\.|\ /,"")}1')
 FILENAME=${2:-"${FILE}.md"}
 
 if [ $# -eq 0 ]
