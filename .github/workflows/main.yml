@@ -28,4 +28,4 @@ jobs:
           gh pr edit ${{ github.event.pull_request.number }} --base $NEW_BASE
         fi
       env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_TOKEN: ${{ secrets.TOKEN }}
