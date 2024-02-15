@@ -18,4 +18,4 @@ jobs:
       - name: Merge to Dev
         run: |
           git checkout develop
-          git merge release
+          git merge origin/release
