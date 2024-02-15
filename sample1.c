@@ -1,12 +1,12 @@
 #include <stdio.h>
 int main()
 {
-   char name[50];
+   char name[25];
    int marks, i, num;
    printf("Enter number of students: ");
    scanf("%d", &num);
    FILE *fptr;
-   fptr = (fopen("C:\\student.txt", "w"));
+   fptr = (fopen("./student.txt", "w"));
    if(fptr == NULL)
    {
        printf("Error!");
