@@ -24,7 +24,10 @@ if [[ "$*" == *"merge"* ]]; then
 	COMMITMSG=$(python3 commitmsg.py)
 	echo ${COMMITMSG}
 	gh pr merge "$URL" --merge --admin --body "${COMMITMSG}"
-	exit
+fi
+
+if [[ "$*" == *"silent"* ]]; then
+	exit 0
 fi
 
 open -a "/Applications/Google Chrome.app" "$URL"

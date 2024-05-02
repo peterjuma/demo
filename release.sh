@@ -26,6 +26,3 @@ release_url=$(curl -s\
   -d '{"tag_name": "'"${newtag}"'", "name": "'"${newtag}"'", "generate_release_notes": true}' | jq -r '.html_url')
 
 open -a "/Applications/Google Chrome.app" "$release_url"
-
-
-
