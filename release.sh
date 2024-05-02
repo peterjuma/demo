@@ -11,7 +11,7 @@ for i in {1..3}; do
 done
 
 # Tag the commit 
-sh autotag b
+sh autotag m
 
 newtag=$(git describe --tags --abbrev=0)
 

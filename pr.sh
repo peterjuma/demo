@@ -20,12 +20,11 @@ then
 	git switch "$CUR_HEAD"
 fi
 
-if [[ "$*" == *"merge"* ]]
-then
+if [[ "$*" == *"merge"* ]]; then
 	COMMITMSG=$(python3 commitmsg.py)
-	#COMMITMSG=$(curl -s http://whatthecommit.com/ | grep -A2 '<div id="content">' | awk -F: 'NR==2 {sub(/<p>/,"");print $1}')
 	echo ${COMMITMSG}
-	gh pr merge "$URL" --merge --admin --body ${COMMITMSG}
+	gh pr merge "$URL" --merge --admin --body "${COMMITMSG}"
+	exit
 fi
 
 open -a "/Applications/Google Chrome.app" "$URL"
