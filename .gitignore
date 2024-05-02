@@ -2,3 +2,4 @@
 commitmsg.py
 *.sh
 autotag
+release.sh
