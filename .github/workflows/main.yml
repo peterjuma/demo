@@ -1,21 +1,17 @@
-name: Release to Dev Merge
-on:
-  workflow_dispatch:
+name: Simple Workflow with a Failing Job
+on: [pull_request]
 jobs:
-  MergeReleaseToDev:
+  build_and_test:  # Explicitly named job
+    name: Build and Test Job
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # Fetches the entire history for all branches and tags
+    - uses: actions/checkout@v2
+    - name: Build
+      run: |
+        echo "Building the project..."
+        # Build commands go here
+    - name: Test
+      run: |
+        echo "Running tests..."
+        # Test commands go here
 
-      - name: Configure Git user
-        run: |
-          git config --local user.email "30427827+peterjuma@users.noreply.github.com"
-          git config --local user.name "peterjuma"
-
-      - name: Merge to Dev
-        run: |
-          git checkout develop
-          git merge origin/release
