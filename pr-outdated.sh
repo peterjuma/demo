@@ -22,6 +22,34 @@ NWO=`gh repo view --json nameWithOwner -q ".nameWithOwner"`
 owner=$(echo $NWO | cut -d"/" -f1)
 name=$(echo $NWO | cut -d"/" -f2)
 
+# gh api repos/$owner/$name/branches/$DEFAULT_BRANCH/protection &> /dev/null 
+
+# if [ $? -ne 0 ]; then
+# 	repositoryId="$(gh api graphql -f query='{repository(owner:"'$owner'",name:"'$name'"){id}}' -q .data.repository.id)"
+# 	gh api graphql -f query='
+# 	mutation($repositoryId:ID!,$branch:String!) {
+# 	 createBranchProtectionRule(input: {
+# 	 repositoryId: $repositoryId
+# 	 pattern: $branch
+# 	 requiresStatusChecks: true
+# 	 requiresStrictStatusChecks: true
+# 	}) { clientMutationId }
+# 	}' -f repositoryId="$repositoryId" -f branch="$DEFAULT_BRANCH" 
+# else
+# 	# gh api repos/$owner/$name/branches/$DEFAULT_BRANCH/protection -q ".required_status_checks.strict" &> /dev/null 
+# 	repositoryId="$(gh api graphql -f query='{repository(owner:"'$owner'",name:"'$name'"){id}}' -q .data.repository.id)"
+# 	gh api graphql -f query='
+# 	mutation($repositoryId:ID!,$branch:String!) {
+# 	 UpdateBranchProtectionRule(input: {
+# 	 repositoryId: $repositoryId
+# 	 pattern: $branch
+# 	 requiresStatusChecks: true
+# 	 requiresStrictStatusChecks: true
+# 	}) { clientMutationId }
+# 	}' -f repositoryId="$repositoryId" -f branch="$DEFAULT_BRANCH" 
+# fi
+
+
 git switch "$DEFAULT_BRANCH"
 ./commits.sh 1
 git push origin ${DEFAULT_BRANCH}
